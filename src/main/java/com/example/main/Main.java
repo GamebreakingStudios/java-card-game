@@ -8,16 +8,16 @@ import com.example.main.model.Player;
 public class Main {
 
     /**
-     * Produces the below output:
+     * Should produce the below output:
      *
-     * Nick has the below cards in their hand:
+     * Nick has the following cards in their hand:
      *   Ten of Diamonds
      *   Four of Clubs
      *   Queen of Hearts
      *   Three of Diamonds
      *   Nine of Diamonds
      *
-     * Tommy has the below cards in their hand:
+     * Tommy has the following cards in their hand:
      *   King of Hearts
      *   Six of Diamonds
      *   Ace of Clubs
@@ -33,16 +33,17 @@ public class Main {
         Player playerOne = new Player("Nick");
         playerOne.replaceHand(dealer.dealCards(5));
 
+        System.out.println(playerOne.getName() +  " has the following cards in their hand:");
+        for (Card card : playerOne.getHand()) {
+            System.out.println("  " + card.getDisplayText());
+        }
+        System.out.print("\n");
+
         Player playerTwo = new Player("Tommy");
         playerTwo.replaceHand(dealer.dealCards(5));
 
-        printPlayersHand(playerOne);
-        printPlayersHand(playerTwo);
-    }
-
-    private static void printPlayersHand(Player player) {
-        System.out.println(player.getName() +  " has the below cards in their hand:");
-        for (Card card : player.getHand()) {
+        System.out.println(playerTwo.getName() +  " has the following cards in their hand:");
+        for (Card card : playerTwo.getHand()) {
             System.out.println("  " + card.getDisplayText());
         }
         System.out.print("\n");

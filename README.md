@@ -25,6 +25,14 @@ A designer gave the following design for a card game to a developer:
 
 The developer has opened a pull request with their implementation of the card game. Your task is to review their pull request.
 
+## Java Version
+
+This project expects Java version `11`.
+
+### IDE
+
+This project was setup with the IntelliJ IDEA IDE in mind. However, you should be able to run Maven commands without IntelliJ IDEA if you have Maven installed on your machine.
+
 ## Branches
 
 - The `main` branch has the skeleton implementation of the card game.

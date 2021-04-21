@@ -2,8 +2,12 @@ package com.example.main.model;
 
 public class Card {
 
-	public Card(String suit, String faceValue) {
+	public String suit;
+	public String faceValue;
 
+	public Card(String suit, String faceValue) {
+		this.suit = suit;
+		this.faceValue = faceValue;
 	}
 
 	/**
@@ -14,7 +18,7 @@ public class Card {
 	 * @return String
 	 */
 	public String getSuit() {
-
+		return suit;
 	}
 
 	/**
@@ -24,7 +28,7 @@ public class Card {
 	 * @return String
 	 */
 	public String getFaceValue() {
-
+		return faceValue;
 	}
 
 	/**
@@ -35,6 +39,6 @@ public class Card {
 	 * @return String
 	 */
 	public String getDisplayText() {
-
+		return faceValue + suit;
 	}
 }
